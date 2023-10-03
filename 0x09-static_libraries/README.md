@@ -1,4 +1,4 @@
-Concepts
+#Concepts
 For this project, we expect you to look at this concept:
 
 C static libraries
@@ -11,13 +11,13 @@ Using A “C” Library In A Program
 What is difference between Dynamic and Static library(Static and Dynamic linking) (stop at 4:44)
 man or help:
 
-ar
-ranlib
-nm
-Learning Objectives
+*ar
+*ranlib
+*nm
+#Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-General
+#General
 What is a static library, how does it work, how to create one, and how to use it
 Basic usage of ar, ranlib, nm
 Copyright - Plagiarism
