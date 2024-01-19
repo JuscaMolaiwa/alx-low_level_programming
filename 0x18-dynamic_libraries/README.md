@@ -1,1 +1,1 @@
-0x18-dynamic_libraries
+0x09. C - Static libraries
