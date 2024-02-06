@@ -7,24 +7,20 @@
  *
  * Return: The value associated with the key, or NULL if the key does not exist.
  */
-
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int index = 0;
-	hash_node_t  *tmp;
+	hash_node_t *ptr = NULL;
+	unsigned int index;
 
-	if (!ht || !key || !*key)
-		return (NULL);
-
-	index = key_index((const unsigned char *)key, ht->size);
-	tmp = ht->array[index];
-
-	while (tmp)
+	if (ht && key)
 	{
-		if (!strcmp(key, tmp->key))
-			return (tmp->value);
-		tmp = tmp->next;
+		index = key_index((unsigned char *)key, ht->size);
+		ptr = ht->array[index];
+		if (ptr == NULL)
+			return (NULL);
+		while (strcmp(ptr->key, key) != 0)
+			ptr = ptr->next;
+		return (ptr->value);
 	}
-
 	return (NULL);
 }
