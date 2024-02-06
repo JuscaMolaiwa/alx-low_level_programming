@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * hash_table_get - Retrieves the value associated with a key.
  * @ht: Pointer to the hash table.
@@ -16,13 +15,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	tmp= ht->array[index];
+	tmp = ht->array[index];
 
 	while (tmp)
 	{
 		if (!strcmp(key, tmp->key))
 			return (tmp->value);
-		tmp= tmp->next;
+		tmp = tmp->next;
 	}
+
 	return (NULL);
 }
