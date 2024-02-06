@@ -1,14 +1,14 @@
 #include "hash_tables.h"
 
 /**
- * key_index - Compute the index for a key in a hash table.
- * @key: The key (string) to hash.
- * @size: The size of the hash table.
+ * key_index - get index for key given
+ * @key: key (string) to hash
+ * @size: size of hash table
  *
- * Return: The index of 'key' using the djb2 algorithm.
+ * Return: index of 'key' using djb2
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-       return (hash_djb2(key) % size);
+	return (hash_djb2(key) % size);
 }
 
