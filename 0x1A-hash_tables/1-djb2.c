@@ -1,20 +1,21 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - Compute the hash value of a string using the djb2 algorithm.
- * @str: The string to hash.
+ * hash_djb2 - function to compute hash of 'str' using djb2
+ * @str: string to hash
  *
- * Return: The computed hash value.
+ * Return: value of 64 bits hash
  */
+
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	unsigned long int hash_value;
-	int character;
+	unsigned long int hash;
+	int c;
 
-	hash_value = 5381;
-	while ((character = *str++))
+	hash = 5381;
+	while ((c = *str++))
 	{
-		hash_value = ((hash_value << 5) + hash_value) + character; /* hash * 33 + character */
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 	}
-	return (hash_value);
+	return (hash);
 }
