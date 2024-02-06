@@ -3,9 +3,6 @@
 /**
  * hash_table_delete - Frees a hash table and all its nodes.
  * @ht: Pointer to the hash table to be deleted.
- *
- * Description: This function deallocates memory for each node in the hash table
- * and the array itself, and then frees the hash table structure.
  */
 void hash_table_delete(hash_table_t *ht)
 {
